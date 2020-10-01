@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  
+
   root 'pages#home'
   get '/hello_world' => 'posts#home'
 
   get '/posts' => 'posts#index'
+  get '/posts/:id' => 'posts#show', :as => :post
   get '/about' => 'static#about'
   get '/team' => 'static#team'
   get 'pages/home'
